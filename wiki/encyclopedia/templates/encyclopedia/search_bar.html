@@ -1,0 +1,17 @@
+{% extends "encyclopedia/layout.html" %}
+
+<!--Search nar and displaying the realtive results-->
+
+{% block title %}
+    Encyclopedia
+{% endblock %}
+
+{% block body %}
+    <h1>Similar to</h1>
+    <ul>
+        {% for entry in entries %}
+            <li><a href="{% url 'Search_bar' %}">{{ entry }}</a></li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
